@@ -72,11 +72,14 @@ extension XMLRPCRawValueRepresentable where Self: StringRadixParsable {
     }
 }
 
+#if swift(>=4.0)
+#else
 extension Int: StringRadixParsable { }
 extension Int32: StringRadixParsable { }
 extension Int8: StringRadixParsable { }
 extension UInt16: StringRadixParsable { }
 extension UInt8: StringRadixParsable { }
+#endif
 
 
 extension Int: XMLRPCRawValueRepresentable {
